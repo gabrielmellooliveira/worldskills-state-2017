@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D80682F0-CA46-4612-8DDA-C0E540867D17}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OC2017</RootNamespace>
+    <AssemblyName>OC2017</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contexto.cs" />
+    <Compile Include="DAO\ConviteDAO.cs" />
+    <Compile Include="DAO\EnderecoDAO.cs" />
+    <Compile Include="DAO\EventoDAO.cs" />
+    <Compile Include="DAO\FotoDAO.cs" />
+    <Compile Include="DAO\FuncionalidadeDAO.cs" />
+    <Compile Include="DAO\IdiomaDAO.cs" />
+    <Compile Include="DAO\PerfilDAO.cs" />
+    <Compile Include="DAO\PessoaDAO.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddress.Designer.cs">
+      <DependentUpon>FormAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfirmacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfirmacao.Designer.cs">
+      <DependentUpon>FormConfirmacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFotos.Designer.cs">
+      <DependentUpon>FormFotos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFuncionalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFuncionalidades.Designer.cs">
+      <DependentUpon>FormFuncionalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGraphics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGraphics.Designer.cs">
+      <DependentUpon>FormGraphics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInfo.Designer.cs">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInviteToEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInviteToEvent.Designer.cs">
+      <DependentUpon>FormInviteToEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLanguage.Designer.cs">
+      <DependentUpon>FormLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListPerson.Designer.cs">
+      <DependentUpon>FormListPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOC.Designer.cs">
+      <DependentUpon>FormOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPerfis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPerfis.Designer.cs">
+      <DependentUpon>FormPerfis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhotos.Designer.cs">
+      <DependentUpon>FormPhotos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegisterEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegisterEvents.Designer.cs">
+      <DependentUpon>FormRegisterEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegisterPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegisterPerson.Designer.cs">
+      <DependentUpon>FormRegisterPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\MessageLogin.cs" />
+    <Compile Include="Messages\MessageManager.cs" />
+    <Compile Include="Messages\MessageRegisterPerson.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Convite.cs" />
+    <Compile Include="Model\Endereco.cs" />
+    <Compile Include="Model\Evento.cs" />
+    <Compile Include="Model\Foto.cs" />
+    <Compile Include="Model\Funcionalidade.cs" />
+    <Compile Include="Model\Idioma.cs" />
+    <Compile Include="Model\Perfil.cs" />
+    <Compile Include="Model\Pessoa.cs" />
+    <Compile Include="Model\PessoaLogada.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\CreateDataBase.cs" />
+    <Compile Include="Util\DataBaseBuilder.cs" />
+    <Compile Include="Util\DBBase.cs" />
+    <Compile Include="Util\Languages\Language.cs" />
+    <Compile Include="Util\Languages\Translate.cs" />
+    <Compile Include="Util\Validations\Validate.cs" />
+    <EmbeddedResource Include="Form1.en-US.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddress.en-US.resx">
+      <DependentUpon>FormAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddress.resx">
+      <DependentUpon>FormAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfirmacao.en-US.resx">
+      <DependentUpon>FormConfirmacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfirmacao.resx">
+      <DependentUpon>FormConfirmacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFotos.resx">
+      <DependentUpon>FormFotos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFuncionalidades.en-US.resx">
+      <DependentUpon>FormFuncionalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFuncionalidades.resx">
+      <DependentUpon>FormFuncionalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGraphics.resx">
+      <DependentUpon>FormGraphics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInfo.resx">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInviteToEvent.en-US.resx">
+      <DependentUpon>FormInviteToEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInviteToEvent.resx">
+      <DependentUpon>FormInviteToEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLanguage.en-US.resx">
+      <DependentUpon>FormLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLanguage.resx">
+      <DependentUpon>FormLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListPerson.en-US.resx">
+      <DependentUpon>FormListPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListPerson.resx">
+      <DependentUpon>FormListPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.en-US.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOC.en-US.resx">
+      <DependentUpon>FormOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOC.resx">
+      <DependentUpon>FormOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPerfis.en-US.resx">
+      <DependentUpon>FormPerfis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPerfis.resx">
+      <DependentUpon>FormPerfis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhotos.en-US.resx">
+      <DependentUpon>FormPhotos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhotos.resx">
+      <DependentUpon>FormPhotos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegisterEvents.en-US.resx">
+      <DependentUpon>FormRegisterEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegisterEvents.resx">
+      <DependentUpon>FormRegisterEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegisterPerson.en-US.resx">
+      <DependentUpon>FormRegisterPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegisterPerson.resx">
+      <DependentUpon>FormRegisterPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ingles.properties" />
+    <None Include="portugues.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New-York-city-street-skyscrapers-cars-people_1920x1080.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Confirm.png" />
+    <Content Include="Resources\Error.png" />
+    <Content Include="Resources\FotosEventos\1.jpg" />
+    <Content Include="Resources\FotosEventos\11.jpg" />
+    <Content Include="Resources\FotosEventos\12.jpg" />
+    <Content Include="Resources\FotosEventos\13.jpg" />
+    <Content Include="Resources\FotosEventos\2.jpg" />
+    <Content Include="Resources\FotosEventos\3.jpg" />
+    <Content Include="Resources\FotosEventos\4.jpg" />
+    <Content Include="Resources\FotosEventos\5.jpg" />
+    <Content Include="Resources\FotosEventos\6.jpg" />
+    <Content Include="Resources\FotosEventos\7.jpg" />
+    <Content Include="Resources\FotosEventos\8.jpg" />
+    <Content Include="Resources\FotosEventos\9.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel1.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel10.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel11.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel12.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel2.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel3.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel4.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel5.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel7.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel8.jpg" />
+    <Content Include="Resources\FotosHoteis\hotel9.jpg" />
+    <Content Include="Resources\FotosQuartosHoteis\q1.jpg" />
+    <Content Include="Resources\FotosQuartosHoteis\q11.jpg" />
+    <Content Include="Resources\FotosQuartosHoteis\q2.jpg" />
+    <Content Include="Resources\FotosQuartosHoteis\q3.jpg" />
+    <Content Include="Resources\FotosQuartosHoteis\q4.jpg" />
+    <Content Include="Resources\FotosQuartosHoteis\q5.jpg" />
+    <Content Include="Resources\FotosQuartosHoteis\q6.jpg" />
+    <Content Include="Resources\FotosQuartosHoteis\q7.jpg" />
+    <Content Include="Resources\FotosQuartosHoteis\q8.jpg" />
+    <Content Include="Resources\FotosQuartosHoteis\q9.jpg" />
+    <Content Include="Resources\icones traduções\brazil.png" />
+    <Content Include="Resources\icones traduções\usa.png" />
+    <Content Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\traduções\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
